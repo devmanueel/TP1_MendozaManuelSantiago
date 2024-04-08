@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/**
+		/**s
 		int numero01 = 5;
 		int numero02 = 6;
 		double promedio = (double) (numero01 + numero02)/2;
