@@ -21,8 +21,7 @@ public class Main {
 	} else {
 		resultado = num1 * 2;
 		System.out.println("Numero: "+resultado);
-	}
-	
+	} 
 	}
 
 }
