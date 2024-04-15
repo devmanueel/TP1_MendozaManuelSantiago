@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.ejercisio01;
+package ar.edu.unju.fi.ejercicio01;
 
 //Punto 1
 

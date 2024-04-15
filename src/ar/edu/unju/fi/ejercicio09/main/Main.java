@@ -7,8 +7,7 @@ import ar.edu.unju.fi.ejercicio09.model.Producto;
 public class Main {
 
 	public static void main(String[] args) {
-		// Se aplico El patrón de diseño Singleton mensionado en la clase 11/04/24
-		
+	// Se aplico El patrón de diseño Singleton mensionado en la clase 11/04/24	
 	Scanner leerScanner = new Scanner(System.in);	
 	Producto producto;
 	
