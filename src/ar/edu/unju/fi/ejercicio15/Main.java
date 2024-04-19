@@ -9,14 +9,14 @@ public class Main {
 		//ingreso de valores entre 3 y 10
         int tamañoArray;
         do {
-            System.out.print("Ingrese un número entero entre 3 y 10: ");
+            System.out.print("Ingrese un número entero entre 5 y 10: ");
             tamañoArray = leerScanner.nextInt();
             //comnica que ingreso un valor invorrecto 
-            if (tamañoArray < 3 || tamañoArray > 10) {
+            if (tamañoArray < 5 || tamañoArray > 10) {
                 System.out.println("Valor ingresado fuera del rango permitido. Por favor, intente nuevamente.");
             }
             	
-        } while (tamañoArray < 3 || tamañoArray > 10); // vuelve a pedir en caso de que el valor sea incorrecto
+        } while (tamañoArray < 5 || tamañoArray > 10); // vuelve a pedir en caso de que el valor sea incorrecto
         
         String [] arregloNombres = new String[tamañoArray];
 
