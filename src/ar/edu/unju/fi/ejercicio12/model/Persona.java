@@ -132,41 +132,18 @@ public class Persona {
 	    public String obtenerEstacion() {
 	    	int dia = fechaNacimiento.get(Calendar.DAY_OF_MONTH);
 	        int mes = fechaNacimiento.get(Calendar.MONTH) + 1; 
-	        if (mes == 1 && dia >=1 && dia <=31) {
+	        if (mes >=1 && (mes <=3 && dia <=20) || (mes==12 && dia>=22 && dia <=31)) {
 				return "Verano";
-			}else if(mes==2 && dia>=1 && dia <=28) {
-				return "Verano";
-			}else if (mes==3 && dia>=1 && dia <=20) {
-				return "Verano";
-			}else if (mes==3 && dia>=21 && dia <=31) {
+			}else if (mes>=4 && (mes <=6 && dia <=20 ))  {
 				return "Otoño";
-			}else if (mes==4 && dia>=1 && dia <=30) {
-				return "Otoño";
-			}else if (mes==5 && dia>=1 && dia <=31) {
-				return "Otoño";
-			}else if (mes==6 && dia>=1 && dia <=20) {
-				return "Otoño";
-			}else if (mes==6 && dia>=21 && dia <=30) {
+			}else if ((mes ==7 || mes ==8) || (mes==6 && dia >=21) || (mes==9 && dia <=20)) {
 				return "Invierno";
-			}else if (mes==7 && dia>=1 && dia <=31) {
-				return "Invierno";
-			}else if (mes==8 && dia>=1 && dia <=31) {
-				return "Invierno";
-			}else if (mes==9 && dia>=1 && dia <=20) {
-				return "Invierno";
-			}else if (mes==9 && dia>=21 && dia <=30) {
+			}else if ((mes==10 || mes==11) || ((mes==9 && dia >=21) || (mes==12 && dia <=21))) {
 				return "Primavera ";
-			}else if (mes==10 && dia>=1 && dia <=31) {
-				return "Primavera ";
-			}else if (mes==11 && dia>=1 && dia <=30) {
-				return "Primavera ";
-			}else if (mes==12 && dia>=1 && dia <=22) {
-				return "Primavera ";
-			}else if (mes==12 && dia>=21 && dia <=31) {
-				return "Verano";
 			}else {
 				return"Fecha Incorrecta";
 			}
+	    
 	    }
 
 	    
