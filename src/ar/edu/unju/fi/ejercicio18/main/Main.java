@@ -33,7 +33,7 @@ public class Main {
 
         Scanner leerScanner = new Scanner(System.in);
         
-        int opcion;
+        int opcion = 0;
         
         do {
             System.out.println("\nMenú:");
@@ -49,9 +49,11 @@ public class Main {
             System.out.print("Ingrese una opción: ");
 
             System.out.print("Ingrese su opción: ");
-            opcion = leerScanner.nextInt();
-
             try {
+            	
+                opcion = leerScanner.nextInt();
+
+            	
                 switch (opcion) {
                     case 1:
                     	altaDestinoTuristico(listadoDestinos, listadoPaises, leerScanner);
@@ -85,12 +87,15 @@ public class Main {
                         System.out.println("Opción inválida. Intente de nuevo.");
                         break;
                 }
-            } catch (InputMismatchException e) {
+            } 
+            catch (InputMismatchException e) {
                 System.out.println("Entrada inválida. Por favor, ingrese un número.");
                 leerScanner.nextLine();
-            } catch (Exception e) {
+            } 
+            catch (Exception e) {
                 System.out.println("Ha ocurrido un error: " + e.getMessage());
             }
+        
         } while (opcion != 9);
     
         leerScanner.close();
