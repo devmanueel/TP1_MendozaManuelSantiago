@@ -16,7 +16,7 @@ public class main {
 				desc+=i;
 			}
 		}
-		System.out.println(j);
+		//System.out.println(j);
 	}	
 }
 
