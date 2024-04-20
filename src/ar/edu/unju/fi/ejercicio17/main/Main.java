@@ -76,7 +76,7 @@ public class Main {
 
         lerScanner.close();
 	}
-	
+	//metodo para agregar a un jugador
 	private static void agregarJugador(Scanner entrada, List<Jugador> jugadores) {
         try {
             System.out.print("Ingrese el nombre del jugador: ");
@@ -113,7 +113,7 @@ public class Main {
         }
         
     }
-
+	//Metodo para mostrar los datos
 	private static void mostrarDatosJugador(Scanner entrada, List<Jugador> jugadores) {
 		
         System.out.println("********* "+ "Cantidad Jugadores: "+jugadores.size()+" ************");
@@ -142,7 +142,7 @@ public class Main {
             System.out.println("Error al mostrar los datos del jugador./n Motivo del Eror: " + e.getMessage());
         }
     }
-
+	//muestro los juagores ordenados por apellido 
     private static void mostrarJugadoresOrdenadosApellido(List<Jugador> jugadores) {
         
     	try {
@@ -252,7 +252,7 @@ public class Main {
          System.out.println("No se encontró un jugador con ese nombre y apellido.");
         
     }
-	
+	//muestra las cantidad total de elementos dentro del araylist 
 	 private static void totalJugadores(List<Jugador> jugadores) {
 		
         System.out.println("********* "+ "Cantidad Jugadores: "+jugadores.size()+" ************");  

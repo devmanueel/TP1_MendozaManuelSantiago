@@ -34,6 +34,7 @@ public class Main {
         Scanner leerScanner = new Scanner(System.in);
         
         int opcion;
+        
         do {
             System.out.println("\nMenú:");
             System.out.println("1 – Alta de destino turístico");
@@ -96,6 +97,7 @@ public class Main {
     }
 
     private static void altaDestinoTuristico(ArrayList<DestinoTuristico> destinos, ArrayList<Pais> paises, Scanner scanner) {
+    	 	try {
     	        System.out.println("Ingrese el código del destino turístico:");
     	        int codigo = scanner.nextInt();
     	        scanner.nextLine(); 
@@ -125,7 +127,14 @@ public class Main {
     	        DestinoTuristico destino = new DestinoTuristico(codigo, nombre, precio, pais, cantidadDias);
     	        
     	        destinos.add(destino);
-    	        System.out.println("Destino turístico agregado con éxito.");
+    	        System.out.println("Destino turístico agregado Correctamente.");
+    			
+    	 	
+			    } catch (InputMismatchException e) {
+			        System.out.println("Error al ingresar datos. Asegúrese de ingresar el tipo de dato correcto.");
+			    } catch (Exception e) {
+			        System.out.println("Ha ocurrido un error: " + e.getMessage());
+			    }
     	  }
     
 
@@ -140,6 +149,7 @@ public class Main {
     }
 
     private static void modificarPais(ArrayList<DestinoTuristico> destinos, ArrayList<Pais> paises, Scanner scanner) {
+    	try {
     	if (destinos.isEmpty()) {
             System.out.println("No hay destinos turísticos para modificar.");
             return;
@@ -179,9 +189,20 @@ public class Main {
 
         destinoModificar.setPais(nuevoPais);
         System.out.println("País modificado correctamente para el destino turístico.");
+        
+        
+	    } catch (InputMismatchException e) {
+	        System.out.println("Error al ingresar datos. Asegúrese de ingresar el tipo de dato correcto.");
+	    } catch (Exception e) {
+	        System.out.println("Ha ocurrido un error: " + e.getMessage());
+	    } finally {
+	        scanner.nextLine(); 
+	    }
     }
 
     private static void eliminarDestino(ArrayList<DestinoTuristico> destinos, Scanner scanner) {
+    	
+    	 try {
     	if (destinos.isEmpty()) {
             System.out.println("No hay destinos turísticos para eliminar.");
             return;
@@ -199,6 +220,13 @@ public class Main {
             }
         }
         System.out.println("El destino turístico no existe.");
+        
+	    } catch (InputMismatchException e) {
+	        System.out.println("Error al ingresar datos. Asegúrese de ingresar el tipo de dato correcto.");
+	    } catch (Exception e) {
+	        System.out.println("Ha ocurrido un error: " + e.getMessage());
+	    }
+    
     }
 
     private static void mostrarDestinosOrdenados(ArrayList<DestinoTuristico> destinos) {
@@ -228,6 +256,8 @@ public class Main {
     }
 
     private static void mostrarDestinosPorPais(ArrayList<DestinoTuristico> destinos, Scanner scanner) {
+    	
+    	 try {
     	 System.out.println("Ingrese el código del país:");
          int codigoPais = scanner.nextInt();
 
@@ -242,6 +272,12 @@ public class Main {
          if (!encontrado) {
              System.out.println("No se encontraron destinos turísticos para el país con código " + codigoPais);
          }
+         
+	    } catch (InputMismatchException e) {
+	        System.out.println("Error al ingresar datos. Asegúrese de ingresar el tipo de dato correcto.");
+	    } catch (Exception e) {
+	        System.out.println("Ha ocurrido un error: " + e.getMessage());
+	    }
     }
         
 		
